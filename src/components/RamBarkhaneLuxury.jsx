@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg" 
 import EchoesofAwakening from "../assets/EchoesofAwakening.jpg"
 import BannerOfWebsiteRam from "../assets/BannerOfWebsiteRam.jpg"
+import Resurgence from "../assests/Resurgence.jpg"
+import Magnanimous from "../assests/Magnanimous.jpg"
 import EtherealEleganceShadowsinCelestialMist from "../assets/EtherealEleganceShadowsinCelestialMist.jpg"
 
 export default function RamBarkhaneLuxury() {
@@ -11,6 +13,20 @@ export default function RamBarkhaneLuxury() {
   const [collectionOpen, setCollectionOpen] = useState(false);
 
   const artworks = [
+     {
+      title: "Resurgence",
+      medium: "Oil on Canvas",
+      dimensions: "30x40 Inches",
+      price: "$5 M",
+      img: Resurgence,
+    },
+     {
+      title: "Magnanimous",
+      medium: "Oil on Canvas",
+      dimensions: "15x23 Inches",
+      price: "$1 M",
+      img: Magnanimous,
+    },
      {
       title: "Echoes of Awakening",
       medium: "Oil on Canvas",
