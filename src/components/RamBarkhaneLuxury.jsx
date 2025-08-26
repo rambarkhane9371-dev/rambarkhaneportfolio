@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg" 
 import EchoesofAwakening from "../assets/EchoesofAwakening.jpg"
 import BannerOfWebsiteRam from "../assets/BannerOfWebsiteRam.jpg"
+import Resurgence from "../assests/Resurgence.jpg"
+import Magnanimous from "../assests/Magnanimous.jpg"
 import EtherealEleganceShadowsinCelestialMist from "../assets/EtherealEleganceShadowsinCelestialMist.jpg"
 
 export default function RamBarkhaneLuxury() {
@@ -11,6 +13,20 @@ export default function RamBarkhaneLuxury() {
   const [collectionOpen, setCollectionOpen] = useState(false);
 
   const artworks = [
+     {
+      title: "Resurgence",
+      medium: "Oil on Canvas",
+      dimensions: "30x40 Inches",
+      price: "$5 M",
+      img: Resurgence,
+    },
+     {
+      title: "Magnanimous",
+      medium: "Oil on Canvas",
+      dimensions: "15x23 Inches",
+      price: "$1 M",
+      img: Magnanimous,
+    },
      {
       title: "Echoes of Awakening",
       medium: "Oil on Canvas",
@@ -120,13 +136,18 @@ export default function RamBarkhaneLuxury() {
             Abstract Elegance
             <br />
             <br />
-            Ram Barkhane is celebrated as a modern master of abstract emotion,
-            whose pioneering styles—Cracturism and Floating Dotism—have redefined
-            the language of contemporary art. Since 2011, he has devoted his life
-            to creating artworks that are not merely paintings, but luxurious
-            statements of sophistication, designed to elevate the most refined
-            living and working spaces.
+            Hi, I am Ram Barkhane – Contemporary Abstract Artist
+
+I am contemporary abstract artist whose work explores depth, texture, and movement through innovative techniques. My unique styles, Cracturism and Floating Dotism, combine intricate linework and layered textures to create paintings that feel both timeless and modern.
+
+Fusing minimalism with expressive abstraction, My canvases often feature powerful contrasts—such as black and gold compositions that radiate luxury and elegance. My works are designed to complement refined interiors, making them sought after by art collectors and luxury homeowners worldwide.
+
+Each painting is not only a visual experience but also a meditation on balance, energy, and emotion. With bold gestures and delicate details, Ram’s art bridges contemporary aesthetics with soulful expression, inviting viewers to find their own meanings within the abstract forms.
           </p>
+  <p>You will find on this website:</p>
+       <li>Contemporary Abstract Painting</li>
+        <li>Modern Abstract Art</li>     <li>Textured Abstract Painting</li>   <li>Luxury Wall Art</li>   <li>Minimalist Abstract Art</li>   <li>Abstract Expressionism</li>   <li>Large Canvas Abstract Painting</li>   <li>Abstract Art for Luxury Interiors</li>
+        <li>Black and Gold Abstract Art (specific & trending)</li>     <li>Abstract Art for Modern Homes</li>
 
           <h2 className="text-3xl font-bold mt-10 mb-4">Studio</h2>
           <p className="text-sm text-gray-300 leading-relaxed">
