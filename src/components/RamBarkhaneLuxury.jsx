@@ -120,12 +120,13 @@ export default function RamBarkhaneLuxury() {
             Abstract Elegance
             <br />
             <br />
-            Ram Barkhane is celebrated as a modern master of abstract emotion,
-            whose pioneering styles—Cracturism and Floating Dotism—have redefined
-            the language of contemporary art. Since 2011, he has devoted his life
-            to creating artworks that are not merely paintings, but luxurious
-            statements of sophistication, designed to elevate the most refined
-            living and working spaces.
+            Hi, I am Ram Barkhane – Contemporary Abstract Artist
+
+I am contemporary abstract artist whose work explores depth, texture, and movement through innovative techniques. My unique styles, Cracturism and Floating Dotism, combine intricate linework and layered textures to create paintings that feel both timeless and modern.
+
+Fusing minimalism with expressive abstraction, My canvases often feature powerful contrasts—such as black and gold compositions that radiate luxury and elegance. My works are designed to complement refined interiors, making them sought after by art collectors and luxury homeowners worldwide.
+
+Each painting is not only a visual experience but also a meditation on balance, energy, and emotion. With bold gestures and delicate details, Ram’s art bridges contemporary aesthetics with soulful expression, inviting viewers to find their own meanings within the abstract forms.
           </p>
 
           <h2 className="text-3xl font-bold mt-10 mb-4">Studio</h2>
