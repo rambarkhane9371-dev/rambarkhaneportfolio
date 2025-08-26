@@ -128,6 +128,10 @@ Fusing minimalism with expressive abstraction, My canvases often feature powerfu
 
 Each painting is not only a visual experience but also a meditation on balance, energy, and emotion. With bold gestures and delicate details, Ram’s art bridges contemporary aesthetics with soulful expression, inviting viewers to find their own meanings within the abstract forms.
           </p>
+  <p>You will find on this website:</p>
+       <li>Contemporary Abstract Painting</li>
+        <li>Modern Abstract Art</li>     <li>Textured Abstract Painting</li>   <li>Luxury Wall Art</li>   <li>Minimalist Abstract Art</li>   <li>Abstract Expressionism</li>   <li>Large Canvas Abstract Painting</li>   <li>Abstract Art for Luxury Interiors</li>
+        <li>Black and Gold Abstract Art (specific & trending)</li>     <li>Abstract Art for Modern Homes</li>
 
           <h2 className="text-3xl font-bold mt-10 mb-4">Studio</h2>
           <p className="text-sm text-gray-300 leading-relaxed">
