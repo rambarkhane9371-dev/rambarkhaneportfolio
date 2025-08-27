@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg";
@@ -18,7 +18,9 @@ import Magnanimous from "../assets/Magnanimous.jpg"
 export default function RamBarkhaneLuxury() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [collectionOpen, setCollectionOpen] = useState(false);
-  const [selectedCollection, setSelectedCollection] = useState("masterpiece");
+  const [selectedCollection, setSelectedCollection] = useState("all");
+  const collectionRef = useRef(null);
+
   const artworks = [
      {
       title: "Resurgence",
@@ -123,9 +125,17 @@ export default function RamBarkhaneLuxury() {
     // },
   ];
 
-  const filteredArtworks = artworks.filter(
-    (art) => art.collection === selectedCollection
-  );
+ const filteredArtworks =
+    selectedCollection === "all"
+      ? artworks
+      : artworks.filter((art) => art.collection === selectedCollection);
+
+   const handleCollectionClick = (collection) => {
+    setSelectedCollection(collection);
+    setCollectionOpen(false);
+    // smooth scroll to gallery
+    collectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="bg-black text-white font-serif">
@@ -170,20 +180,20 @@ export default function RamBarkhaneLuxury() {
         {collectionOpen && (
           <div className="mt-2 bg-gray-900 border border-gray-700 rounded-lg p-4 text-left space-y-2">
             <button
-              onClick={() => setSelectedCollection("masterpiece")}
-              className="block hover:text-gray-300"
+              onClick={() => handleCollectionClick("masterpiece")}
+              className="block hover:text-gray-300 cursor-pointer"
             >
               The Masterpiece Collection
             </button>
             <button
-              onClick={() => setSelectedCollection("limited")}
-              className="block hover:text-gray-300"
+              onClick={() => handleCollectionClick("limited")}
+              className="block hover:text-gray-300 cursor-pointer"
             >
               Limited Edition Luxe Collection
             </button>
             <button
-              onClick={() => setSelectedCollection("modern")}
-              className="block hover:text-gray-300"
+              onClick={() => handleCollectionClick("modern")}
+              className="block hover:text-gray-300 cursor-pointer"
             >
               Modern Elegance Collection
             </button>
@@ -211,7 +221,7 @@ export default function RamBarkhaneLuxury() {
             of Abstract Elegance
             <br />
             <br />
-            <p className="text-sm leading-relaxed text-gray-300 text-center p-2">
+            <p className="text-sm leading-relaxed text-gray-300 p-2 text-left">
               Hi, I am Ram Barkhane – Contemporary Abstract Artist I am
               contemporary abstract artist whose work explores depth, texture,
               and movement through innovative techniques. My unique styles,
@@ -233,7 +243,7 @@ export default function RamBarkhaneLuxury() {
           <p className="text-sm leading-relaxed text-gray-300 mt-3">
             You will find on this website:
           </p>
-          <ul className="list-disc list-inside text-sm leading-relaxed text-gray-300 mt-2 text-center">
+          <ul className="list-disc list-inside text-sm leading-relaxed text-gray-300 mt-2 text-left">
             <li>Contemporary Abstract Painting</li>
             <li>Modern Abstract Art</li>
             <li>Textured Abstract Painting</li>
@@ -254,7 +264,7 @@ export default function RamBarkhaneLuxury() {
           </p>
 
           <h2 className="text-3xl font-bold mt-10 mb-4">Contact</h2>
-          <p className="text-sm text-gray-300 leading-relaxed">
+          <p className="text-sm text-gray-300 leading-relaxed text-left">
             Ram Barkhane <br />
             E6/95 Shalimar Homes Flat No. 6 <br />
             Arera Colony, Bhopal <br />
@@ -309,12 +319,18 @@ export default function RamBarkhaneLuxury() {
       </div>
 
       {/* Featured Collection Gallery */}
-      <section id="masterpiece" className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Featured Collection
+      <section id="collection" ref={collectionRef}  className="py-20 px-6 max-w-6xl mx-auto">
+        <h2   className="text-4xl font-bold text-center mb-12">
+          {selectedCollection === "all"
+            ? "Featured Collection"
+            : selectedCollection === "masterpiece"
+            ? "The Masterpiece Collection"
+            : selectedCollection === "limited"
+            ? "Limited Edition Luxe Collection"
+            : "Modern Elegance Collection"}
         </h2>
         <div className="grid md:grid-cols-3 gap-12">
-          {artworks.map((art, idx) => (
+          {filteredArtworks.map((art, idx) => (
             <div
               key={idx}
               className="space-y-4 border-2 border-gray-400 rounded-2xl pb-2"
