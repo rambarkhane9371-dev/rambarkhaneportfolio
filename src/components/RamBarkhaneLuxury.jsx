@@ -5,17 +5,50 @@ import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg";
 import EchoesofAwakening from "../assets/EchoesofAwakening.jpg";
 import BannerOfWebsiteRam from "../assets/BannerOfWebsiteRam.jpg";
 import EtherealEleganceShadowsinCelestialMist from "../assets/EtherealEleganceShadowsinCelestialMist.jpg";
+import Untittled1 from "../assets/Untittled1.jpg"
+import Untittled2 from "../assets/Untittled2.jpg"
+import Untittled3 from "../assets/Untittled3.jpg"
+import Untittled4 from "../assets/Untittled4.jpg"
+import Untittled5 from "../assets/Untittled5.jpg"
+import Resurgence from "../assets/Resurgence.jpg"
+import Tranquil from "../assets/Tranquil.jpg"
+import Magnanimous from "../assets/Magnanimous.jpg"
+
 
 export default function RamBarkhaneLuxury() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [collectionOpen, setCollectionOpen] = useState(false);
   const [selectedCollection, setSelectedCollection] = useState("masterpiece");
   const artworks = [
+     {
+      title: "Resurgence",
+      medium: "Oil on Canvas",
+      dimensions: "30x40 Inches",
+      price: "$5M",
+      img: Resurgence,
+      collection: "masterpiece",
+    },
+    {
+      title: "Magnanimous",
+      medium: "Oil on Canvas",
+      dimensions: "15x23 Inches",
+      price: "$1M",
+      img: Magnanimous,
+      collection: "masterpiece",
+    },
+    {
+      title: "Tranquil",
+      medium: "Oil on Canvas",
+      dimensions: "15x23 Inches",
+      price: "$500000",
+      img: Tranquil,
+      collection: "masterpiece",
+    },
     {
       title: "Echoes of Awakening",
       medium: "Oil on Canvas",
       dimensions: "24x24 Inches",
-      price: "$ 80000",
+      price: "$80000",
       img: EchoesofAwakening,
       collection: "limited",
     },
