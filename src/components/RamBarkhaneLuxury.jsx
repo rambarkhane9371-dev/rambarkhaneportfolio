@@ -68,7 +68,7 @@ export default function RamBarkhaneLuxury() {
       dimensions: "4x4",
       price: "$100000",
       img: Untittled3,
-      collection: "limited",
+      collection: "masterpiece",
     },
     {
       title: "Untittled",
@@ -76,7 +76,7 @@ export default function RamBarkhaneLuxury() {
       dimensions: "4x4",
       price: "$100000",
       img: Untittled4,
-      collection: "modern",
+      collection: "masterpiece",
     },
     {
       title: "Untittled",
@@ -84,7 +84,7 @@ export default function RamBarkhaneLuxury() {
       dimensions: "12x12 Inches",
       price: "$100000",
       img: Untittled5,
-      collection: "modern",
+      collection: "masterpiece",
     },
     {
       title: "Untittled",
@@ -222,8 +222,8 @@ export default function RamBarkhaneLuxury() {
             <br />
             <br />
             <p className="text-sm leading-relaxed text-gray-300 p-2 text-left">
-              Hi, I am Ram Barkhane – Contemporary Abstract Artist I am
-              contemporary abstract artist whose work explores depth, texture,
+              Hi, I am Ram Barkhane – I am
+              contemporary abstract artist my work explores depth, texture,
               and movement through innovative techniques. My unique styles,
               Cracturism and Floating Dotism, combine intricate linework and
               layered textures to create paintings that feel both timeless and
@@ -283,8 +283,8 @@ export default function RamBarkhaneLuxury() {
           <br />
           <br />
           <p className="text-sm leading-relaxed text-gray-300 text-center p-2">
-            Hi, I am Ram Barkhane – Contemporary Abstract Artist I am
-            contemporary abstract artist whose work explores depth, texture, and
+            Hi, I am Ram Barkhane – I am
+            contemporary abstract artist my work explores depth, texture, and
             movement through innovative techniques. My unique styles, Cracturism
             and Floating Dotism, combine intricate linework and layered textures
             to create paintings that feel both timeless and modern. <br />{" "}
