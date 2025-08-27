@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
-import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg" 
-import EchoesofAwakening from "../assets/EchoesofAwakening.jpg"
-import BannerOfWebsiteRam from "../assets/BannerOfWebsiteRam.jpg"
-import EtherealEleganceShadowsinCelestialMist from "../assets/EtherealEleganceShadowsinCelestialMist.jpg"
+import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg";
+import EchoesofAwakening from "../assets/EchoesofAwakening.jpg";
+import BannerOfWebsiteRam from "../assets/BannerOfWebsiteRam.jpg";
+import EtherealEleganceShadowsinCelestialMist from "../assets/EtherealEleganceShadowsinCelestialMist.jpg";
 
 export default function RamBarkhaneLuxury() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [collectionOpen, setCollectionOpen] = useState(false);
   const [selectedCollection, setSelectedCollection] = useState("masterpiece");
   const artworks = [
-     {
+    {
       title: "Echoes of Awakening",
       medium: "Oil on Canvas",
       dimensions: "24x24 Inches",
       price: "$ 80000",
       img: EchoesofAwakening,
-      collection : "limited",
+      collection: "limited",
     },
     {
       title: "Ethereal Elegance: Shadows in Celestial Mist",
@@ -25,31 +25,31 @@ export default function RamBarkhaneLuxury() {
       dimensions: "26x28 Inches",
       price: "$75000",
       img: EtherealEleganceShadowsinCelestialMist,
-      collection : "limited",
+      collection: "limited",
     },
-        {
+    {
       title: "Untittled",
       medium: "Oil on canvas",
       dimensions: "4x4",
       price: "$100000",
       img: Untittled3,
-      collection : "limited",
+      collection: "limited",
     },
-        {
+    {
       title: "Untittled",
       medium: "Oil on canvas",
       dimensions: "4x4",
       price: "$100000",
       img: Untittled4,
-      collection : "modern",
+      collection: "modern",
     },
-        {
+    {
       title: "Untittled",
       medium: "Oil on canvas",
       dimensions: "12x12 Inches",
       price: "$100000",
       img: Untittled5,
-      collection : "modern",
+      collection: "modern",
     },
     {
       title: "Untittled",
@@ -57,15 +57,15 @@ export default function RamBarkhaneLuxury() {
       dimensions: "12x12 Inches",
       price: "$1000",
       img: Untittled1,
-      collection : "modern",
+      collection: "modern",
     },
-        {
+    {
       title: "Untittled",
       medium: "Acrylic on canvas",
       dimensions: "12x12 Inches",
       price: "$1000",
       img: Untittled2,
-      collection : "modern",
+      collection: "modern",
     },
     // {
     //   title: "Resurgence – A Strong Comeback",
@@ -90,7 +90,7 @@ export default function RamBarkhaneLuxury() {
     // },
   ];
 
-   const filteredArtworks = artworks.filter(
+  const filteredArtworks = artworks.filter(
     (art) => art.collection === selectedCollection
   );
 
@@ -136,13 +136,22 @@ export default function RamBarkhaneLuxury() {
         </button>
         {collectionOpen && (
           <div className="mt-2 bg-gray-900 border border-gray-700 rounded-lg p-4 text-left space-y-2">
-            <button onClick={() => setSelectedCollection("masterpiece")} className="block hover:text-gray-300">
+            <button
+              onClick={() => setSelectedCollection("masterpiece")}
+              className="block hover:text-gray-300"
+            >
               The Masterpiece Collection
             </button>
-            <button onClick={() => setSelectedCollection("limited")} className="block hover:text-gray-300">
+            <button
+              onClick={() => setSelectedCollection("limited")}
+              className="block hover:text-gray-300"
+            >
               Limited Edition Luxe Collection
             </button>
-            <button onClick={() => setSelectedCollection("modern")} className="block hover:text-gray-300">
+            <button
+              onClick={() => setSelectedCollection("modern")}
+              className="block hover:text-gray-300"
+            >
               Modern Elegance Collection
             </button>
           </div>
@@ -169,13 +178,40 @@ export default function RamBarkhaneLuxury() {
             of Abstract Elegance
             <br />
             <br />
-            Ram Barkhane is celebrated as a modern master of abstract emotion,
-            whose pioneering styles—Cracturism and Floating Dotism—have redefined
-            the language of contemporary art. Since 2011, he has devoted his life
-            to creating artworks that are not merely paintings, but luxurious
-            statements of sophistication, designed to elevate the most refined
-            living and working spaces.
+            <p className="text-sm leading-relaxed text-gray-300 text-center p-2">
+              Hi, I am Ram Barkhane – Contemporary Abstract Artist I am
+              contemporary abstract artist whose work explores depth, texture,
+              and movement through innovative techniques. My unique styles,
+              Cracturism and Floating Dotism, combine intricate linework and
+              layered textures to create paintings that feel both timeless and
+              modern. <br /> <br /> Fusing minimalism with expressive
+              abstraction, My canvases often feature powerful contrasts—such as
+              black and gold compositions that radiate luxury and elegance. My
+              works are designed to complement refined interiors, making them
+              sought after by art collectors and luxury homeowners worldwide.{" "}
+              <br /> <br /> Each painting is not only a visual experience but
+              also a meditation on balance, energy, and emotion. With bold
+              gestures and delicate details, Ram’s art bridges contemporary
+              aesthetics with soulful expression, inviting viewers to find their
+              own meanings within the abstract forms.
+            </p>
           </p>
+
+          <p className="text-sm leading-relaxed text-gray-300 mt-3">
+            You will find on this website:
+          </p>
+          <ul className="list-disc list-inside text-sm leading-relaxed text-gray-300 mt-2 text-center">
+            <li>Contemporary Abstract Painting</li>
+            <li>Modern Abstract Art</li>
+            <li>Textured Abstract Painting</li>
+            <li>Luxury Wall Art</li>
+            <li>Minimalist Abstract Art</li>
+            <li>Abstract Expressionism</li>
+            <li>Large Canvas Abstract Painting</li>
+            <li>Abstract Art for Luxury Interiors</li>
+            <li>Black and Gold Abstract Art (specific & trending)</li>
+            <li>Abstract Art for Modern Homes</li>
+          </ul>
 
           <h2 className="text-3xl font-bold mt-10 mb-4">Studio</h2>
           <p className="text-sm text-gray-300 leading-relaxed">
@@ -196,15 +232,15 @@ export default function RamBarkhaneLuxury() {
         </motion.div>
       )}
 
-
       <div className="text-center hidden  xl:block  2xl:block text-lg md:text-xl leading-relaxed  ">
-         <h2 className="text-3xl font-bold mb-4">About</h2>
-          <p className="text-md leading-relaxed text-gray-300 text-center">
-            Modern Visionary | Creator of Cracturism & Floating Dotism | Master
-            of Abstract Elegance
-            <br />
-            <br />
-            <p className="text-sm leading-relaxed text-gray-300 text-center p-2">Hi, I am Ram Barkhane – Contemporary Abstract Artist I am
+        <h2 className="text-3xl font-bold mb-4">About</h2>
+        <p className="text-md leading-relaxed text-gray-300 text-center">
+          Modern Visionary | Creator of Cracturism & Floating Dotism | Master of
+          Abstract Elegance
+          <br />
+          <br />
+          <p className="text-sm leading-relaxed text-gray-300 text-center p-2">
+            Hi, I am Ram Barkhane – Contemporary Abstract Artist I am
             contemporary abstract artist whose work explores depth, texture, and
             movement through innovative techniques. My unique styles, Cracturism
             and Floating Dotism, combine intricate linework and layered textures
@@ -218,30 +254,31 @@ export default function RamBarkhaneLuxury() {
             balance, energy, and emotion. With bold gestures and delicate
             details, Ram’s art bridges contemporary aesthetics with soulful
             expression, inviting viewers to find their own meanings within the
-            abstract forms.</p>
+            abstract forms.
           </p>
+        </p>
 
-          <p className="text-sm leading-relaxed text-gray-300 mt-3">
-            You will find on this website:
-          </p>
-          <ul className="list-disc list-inside text-sm leading-relaxed text-gray-300 mt-2 text-center">
-            <li>Contemporary Abstract Painting</li>
-            <li>Modern Abstract Art</li>
-            <li>Textured Abstract Painting</li>
-            <li>Luxury Wall Art</li>
-            <li>Minimalist Abstract Art</li>
-            <li>Abstract Expressionism</li>
-            <li>Large Canvas Abstract Painting</li>
-            <li>Abstract Art for Luxury Interiors</li>
-            <li>Black and Gold Abstract Art (specific & trending)</li>
-            <li>Abstract Art for Modern Homes</li>
-          </ul>
+        <p className="text-sm leading-relaxed text-gray-300 mt-3">
+          You will find on this website:
+        </p>
+        <ul className="list-disc list-inside text-sm leading-relaxed text-gray-300 mt-2 text-center">
+          <li>Contemporary Abstract Painting</li>
+          <li>Modern Abstract Art</li>
+          <li>Textured Abstract Painting</li>
+          <li>Luxury Wall Art</li>
+          <li>Minimalist Abstract Art</li>
+          <li>Abstract Expressionism</li>
+          <li>Large Canvas Abstract Painting</li>
+          <li>Abstract Art for Luxury Interiors</li>
+          <li>Black and Gold Abstract Art (specific & trending)</li>
+          <li>Abstract Art for Modern Homes</li>
+        </ul>
       </div>
 
       {/* Featured Collection Gallery */}
       <section id="masterpiece" className="py-20 px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">
-          Featured Collection 
+          Featured Collection
         </h2>
         <div className="grid md:grid-cols-3 gap-12">
           {artworks.map((art, idx) => (
@@ -259,21 +296,20 @@ export default function RamBarkhaneLuxury() {
               <p className="text-gray-400 text-sm">{art.dimensions}</p>
               <p className="text-lg">{art.price}</p>
               <a
-  href={`https://wa.me/919200636667?text=${encodeURIComponent(
-    `Hello Ram,\n\nI am interested in purchasing:\n` +
-    `*Title:* ${art.title}\n` +
-    `*Medium:* ${art.medium}\n` +
-    `*Dimensions:* ${art.dimensions}\n` +
-    `*Price:* ${art.price}\n\n` +
-    `Please provide more details.`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block bg-white text-black px-6 py-2 rounded-2xl font-medium shadow hover:bg-gray-200"
->
-  Purchase
-</a>
-
+                href={`https://wa.me/919200636667?text=${encodeURIComponent(
+                  `Hello Ram,\n\nI am interested in purchasing:\n` +
+                    `*Title:* ${art.title}\n` +
+                    `*Medium:* ${art.medium}\n` +
+                    `*Dimensions:* ${art.dimensions}\n` +
+                    `*Price:* ${art.price}\n\n` +
+                    `Please provide more details.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-black px-6 py-2 rounded-2xl font-medium shadow hover:bg-gray-200"
+              >
+                Purchase
+              </a>
             </div>
           ))}
         </div>
