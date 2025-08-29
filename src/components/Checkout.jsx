@@ -5,25 +5,24 @@ import RamBarkhaneProfilePhoto from "../assets/RamBarkhaneProfilePhoto.jpg";
 import EchoesofAwakening from "../assets/EchoesofAwakening.jpg";
 import BannerOfWebsiteRam from "../assets/BannerOfWebsiteRam.jpg";
 import EtherealEleganceShadowsinCelestialMist from "../assets/EtherealEleganceShadowsinCelestialMist.jpg";
-import Untittled1 from "../assets/Untittled1.jpg";
-import Untittled2 from "../assets/Untittled2.jpg";
-import Untittled3 from "../assets/Untittled3.jpg";
-import Untittled4 from "../assets/Untittled4.jpg";
-import Untittled5 from "../assets/Untittled5.jpg";
-import Resurgence from "../assets/Resurgence.jpg";
-import Tranquil from "../assets/Tranquil.jpg";
-import Magnanimous from "../assets/Magnanimous.jpg";
-import { useNavigate } from "react-router-dom";
+import Untittled1 from "../assets/Untittled1.jpg"
+import Untittled2 from "../assets/Untittled2.jpg"
+import Untittled3 from "../assets/Untittled3.jpg"
+import Untittled4 from "../assets/Untittled4.jpg"
+import Untittled5 from "../assets/Untittled5.jpg"
+import Resurgence from "../assets/Resurgence.jpg"
+import Tranquil from "../assets/Tranquil.jpg"
+import Magnanimous from "../assets/Magnanimous.jpg"
 
-export default function RamBarkhaneLuxury() {
+
+export default function Checkout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [collectionOpen, setCollectionOpen] = useState(false);
   const [selectedCollection, setSelectedCollection] = useState("all");
   const collectionRef = useRef(null);
-  const navigate = useNavigate();
 
   const artworks = [
-    {
+     {
       title: "Resurgence",
       medium: "Oil on Canvas",
       dimensions: "30x40 Inches",
@@ -102,57 +101,25 @@ export default function RamBarkhaneLuxury() {
       price: "$1000",
       img: Untittled2,
       collection: "modern",
-    },
+    },    
   ];
 
-  const filteredArtworks =
+ const filteredArtworks =
     selectedCollection === "all"
       ? artworks
       : artworks.filter((art) => art.collection === selectedCollection);
 
-  const handleCollectionClick = (collection) => {
+   const handleCollectionClick = (collection) => {
     setSelectedCollection(collection);
     setCollectionOpen(false);
     // smooth scroll to gallery
     collectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handlePurchase = (art) => {
-    // you can pass data with state
-    navigate("/checkout", { state: { artwork: art } });
-  };
-
   return (
     <div className="bg-black text-white font-serif">
       {/* Banner Section */}
-      <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* Slideshow placeholder */}
-        <div
-          className="absolute inset-0 bg-cover bg-center animate-pulse opacity-70"
-          style={{ backgroundImage: `url(${BannerOfWebsiteRam})` }}
-        ></div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-wide">
-            Where Art Meets Luxury
-          </h1>
-          <p className="text-xl md:text-2xl italic">
-            Original Abstract Masterpieces of Ram Barkhane
-          </p>
-        </div>
-      </section>
-
-      {/* Artist Portrait & Statement */}
-      <section className="py-16 text-center max-w-3xl mx-auto px-6">
-        <img
-          src={RamBarkhaneProfilePhoto}
-          alt="Ram Barkhane"
-          className="mx-auto mb-6 rounded-full w-48 h-48 object-cover border-4 border-gray-600 shadow-lg"
-        />
-        <p className="text-lg md:text-xl leading-relaxed">
-          Transforming emotions into timeless abstract masterpieces — bespoke
-          art for the world's most refined homes, offices, and private estates.
-        </p>
-      </section>
+      
 
       {/* Navigation */}
       <div className="fixed top-6 left-6 z-50">
@@ -207,20 +174,21 @@ export default function RamBarkhaneLuxury() {
             <br />
             <br />
             <p className="text-sm leading-relaxed text-gray-300 p-2 text-left">
-              Hi, I am Ram Barkhane – I am contemporary abstract artist my work
-              explores depth, texture, and movement through innovative
-              techniques. My unique styles, Cracturism and Floating Dotism,
-              combine intricate linework and layered textures to create
-              paintings that feel both timeless and modern. <br /> <br /> Fusing
-              minimalism with expressive abstraction, My canvases often feature
-              powerful contrasts—such as black and gold compositions that
-              radiate luxury and elegance. My works are designed to complement
-              refined interiors, making them sought after by art collectors and
-              luxury homeowners worldwide. <br /> <br /> Each painting is not
-              only a visual experience but also a meditation on balance, energy,
-              and emotion. With bold gestures and delicate details, Ram’s art
-              bridges contemporary aesthetics with soulful expression, inviting
-              viewers to find their own meanings within the abstract forms.
+              Hi, I am Ram Barkhane – I am
+              contemporary abstract artist my work explores depth, texture,
+              and movement through innovative techniques. My unique styles,
+              Cracturism and Floating Dotism, combine intricate linework and
+              layered textures to create paintings that feel both timeless and
+              modern. <br /> <br /> Fusing minimalism with expressive
+              abstraction, My canvases often feature powerful contrasts—such as
+              black and gold compositions that radiate luxury and elegance. My
+              works are designed to complement refined interiors, making them
+              sought after by art collectors and luxury homeowners worldwide.{" "}
+              <br /> <br /> Each painting is not only a visual experience but
+              also a meditation on balance, energy, and emotion. With bold
+              gestures and delicate details, Ram’s art bridges contemporary
+              aesthetics with soulful expression, inviting viewers to find their
+              own meanings within the abstract forms.
             </p>
           </p>
 
@@ -259,55 +227,11 @@ export default function RamBarkhaneLuxury() {
         </motion.div>
       )}
 
-      <div className="text-center hidden  xl:block  2xl:block text-lg md:text-xl leading-relaxed  ">
-        <h2 className="text-3xl font-bold mb-4">About</h2>
-        <p className="text-md leading-relaxed text-gray-300 text-center">
-          Modern Visionary | Creator of Cracturism & Floating Dotism | Master of
-          Abstract Elegance
-          <br />
-          <br />
-          <p className="text-sm leading-relaxed text-gray-300 text-center p-2">
-            Hi, I am Ram Barkhane – I am contemporary abstract artist my work
-            explores depth, texture, and movement through innovative techniques.
-            My unique styles, Cracturism and Floating Dotism, combine intricate
-            linework and layered textures to create paintings that feel both
-            timeless and modern. <br /> <br /> Fusing minimalism with expressive
-            abstraction, My canvases often feature powerful contrasts—such as
-            black and gold compositions that radiate luxury and elegance. My
-            works are designed to complement refined interiors, making them
-            sought after by art collectors and luxury homeowners worldwide.{" "}
-            <br /> <br /> Each painting is not only a visual experience but also
-            a meditation on balance, energy, and emotion. With bold gestures and
-            delicate details, Ram’s art bridges contemporary aesthetics with
-            soulful expression, inviting viewers to find their own meanings
-            within the abstract forms.
-          </p>
-        </p>
-
-        <p className="text-sm leading-relaxed text-gray-300 mt-3">
-          You will find on this website:
-        </p>
-        <ul className="list-disc list-inside text-sm leading-relaxed text-gray-300 mt-2 text-center">
-          <li>Contemporary Abstract Painting</li>
-          <li>Modern Abstract Art</li>
-          <li>Textured Abstract Painting</li>
-          <li>Luxury Wall Art</li>
-          <li>Minimalist Abstract Art</li>
-          <li>Abstract Expressionism</li>
-          <li>Large Canvas Abstract Painting</li>
-          <li>Abstract Art for Luxury Interiors</li>
-          <li>Black and Gold Abstract Art (specific & trending)</li>
-          <li>Abstract Art for Modern Homes</li>
-        </ul>
-      </div>
+      
 
       {/* Featured Collection Gallery */}
-      <section
-        id="collection"
-        ref={collectionRef}
-        className="py-20 px-6 max-w-6xl mx-auto"
-      >
-        <h2 className="text-4xl font-bold text-center mb-12">
+      <section id="collection" ref={collectionRef}  className="py-20 px-6 max-w-6xl mx-auto">
+        <h2   className="text-4xl font-bold text-center mb-12">
           {selectedCollection === "all"
             ? "Featured Collection"
             : selectedCollection === "masterpiece"
@@ -320,7 +244,7 @@ export default function RamBarkhaneLuxury() {
           {filteredArtworks.map((art, idx) => (
             <div
               key={idx}
-              className="space-y-4 border-2 border-gray-400 rounded-2xl  pb-2"
+              className="space-y-4 border-2 border-gray-400 rounded-2xl pb-2"
             >
               <img
                 src={art.img}
@@ -331,12 +255,21 @@ export default function RamBarkhaneLuxury() {
               <p className="text-gray-400 text-sm">{art.medium}</p>
               <p className="text-gray-400 text-sm">{art.dimensions}</p>
               <p className="text-lg">{art.price}</p>
-              <button
-                onClick={() => handlePurchase(art)}
+              <a
+                href={`https://wa.me/919200636667?text=${encodeURIComponent(
+                  `Hello Ram,\n\nI am interested in purchasing:\n` +
+                    `*Title:* ${art.title}\n` +
+                    `*Medium:* ${art.medium}\n` +
+                    `*Dimensions:* ${art.dimensions}\n` +
+                    `*Price:* ${art.price}\n\n` +
+                    `Please provide more details.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-black px-6 py-2 rounded-2xl font-medium shadow hover:bg-gray-200"
               >
                 Purchase
-              </button>
+              </a>
             </div>
           ))}
         </div>

@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import RamBarkhaneLuxury from './components/RamBarkhaneLuxury'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RamBarkhaneLuxury from "./components/RamBarkhaneLuxury";
+import Checkout from "./components/Checkout";
 
 function App() {
-  
-
   return (
-    <>
-      <RamBarkhaneLuxury/>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<RamBarkhaneLuxury />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
